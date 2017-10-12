@@ -37,8 +37,18 @@ Route::get ('add new/{name?}', function($name = 'annie'){
 });
 */
 
+/*
 Route::get('hello/{name?}', ['as' => 'hello.index', function($name="Everybody"){
      return 'Hello, '.$name;
+}]);
+
+Route::get('/', function () {
+    return view('welcome');
+});
+*/
+
+Route::get('say/{name?}', ['as' => 'hello.index', function($name="Everybody"){
+    return 'Hello, '.$name;
 }]);
 
 Route::get('/', function () {
