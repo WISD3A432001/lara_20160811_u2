@@ -47,10 +47,16 @@ Route::get('/', function () {
 });
 */
 
+/*
 Route::get('say/{name?}', ['as' => 'hello.index', function($name="Everybody"){
     return 'Hello, '.$name;
-}]);
+}])
 
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+Route::get('dashboard', function(){
+    return 'dashboard';
 });
