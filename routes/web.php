@@ -31,6 +31,16 @@ Route::get ('hello/{name?}', function($name = 'Everybody'){
 });
 */
 
+/*
 Route::get ('add new/{name?}', function($name = 'annie'){
     return 'Hello, ' .$name;
+});
+*/
+
+Route::get('hello/{name?}', ['as' => 'hello.index', function($name="Everybody"){
+     return 'Hello, '.$name;
+}]);
+
+Route::get('/', function () {
+    return view('welcome');
 });
